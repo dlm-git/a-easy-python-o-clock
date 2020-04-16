@@ -1,0 +1,28 @@
+#дата
+import datetime
+#для погоды (на будушее)
+import pyowm
+#для очистки кансоли
+import os
+#для цвета
+import colorama
+#времени
+import time
+#для цвета 
+from colorama import Fore, Back, Style
+from colorama import init
+#бесконечный цыкл
+num = 1
+while num < 10:
+	#анит вылет изза перегрузки
+	time.sleep(1)
+	#для цвета 3
+	init()
+	print( Fore.RED )
+	print( Back.CYAN )
+	#анит вылет изза перегрузки + красота + очистка консоли
+	clear = lambda: os.system('cls')
+	clear()
+	#вывод времини снасало дата в формате ( год месяц день день-недели час минуты секунды в pm )
+	print(datetime.date.isoformat(datetime.date.today())+ " " + time.strftime("%A %p") + " " + time.strftime('%I:%M:%S')) 
+#конец	
